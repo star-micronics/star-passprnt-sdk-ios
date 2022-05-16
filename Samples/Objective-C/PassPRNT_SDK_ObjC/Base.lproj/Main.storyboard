@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="THA-u1-yNi">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--main-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rE-v5-aEE">
+                                <rect key="frame" x="171.5" y="629" width="32" height="30"/>
+                                <state key="normal" title="Print"/>
+                                <connections>
+                                    <action selector="touchUpInside_print:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sDD-8t-Uty"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5T9-8F-BY2">
+                                <rect key="frame" x="0.0" y="44" width="375" height="577"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="f5l-D1-1pS">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f5l-D1-1pS" id="XD4-RC-vyE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Uh-Ls-EJ8">
+                                <rect key="frame" x="337" y="633" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="MVd-SE-mPl"/>
+                                    <constraint firstAttribute="height" constant="22" id="vGB-Fr-CNh"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="touchUpInside_about:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DnS-7I-6SR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3rE-v5-aEE" firstAttribute="centerX" secondItem="1G0-FH-4WB" secondAttribute="centerX" id="1xR-jw-fDJ"/>
+                            <constraint firstItem="1G0-FH-4WB" firstAttribute="bottom" secondItem="8Uh-Ls-EJ8" secondAttribute="bottom" constant="12" id="9kR-mx-It8"/>
+                            <constraint firstItem="5T9-8F-BY2" firstAttribute="top" secondItem="1G0-FH-4WB" secondAttribute="top" id="9t8-fd-hpE"/>
+                            <constraint firstItem="5T9-8F-BY2" firstAttribute="centerX" secondItem="3rE-v5-aEE" secondAttribute="centerX" id="ZsO-kU-05Z"/>
+                            <constraint firstItem="1G0-FH-4WB" firstAttribute="bottom" secondItem="3rE-v5-aEE" secondAttribute="bottom" constant="8" id="cvm-lQ-Ipm"/>
+                            <constraint firstItem="5T9-8F-BY2" firstAttribute="leading" secondItem="1G0-FH-4WB" secondAttribute="leading" id="g7O-cu-glV"/>
+                            <constraint firstItem="8Uh-Ls-EJ8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jgx-CG-3Ua"/>
+                            <constraint firstItem="3rE-v5-aEE" firstAttribute="top" secondItem="5T9-8F-BY2" secondAttribute="bottom" constant="8" symbolic="YES" id="m51-Of-RdU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1G0-FH-4WB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="main" id="lhl-IR-udZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="5T9-8F-BY2" id="6GI-MG-ByC"/>
+                        <segue destination="4kx-74-rj0" kind="show" identifier="pushDetailView" id="BRm-7C-NNk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068" y="379"/>
+        </scene>
+        <!--Detail Table View Controller-->
+        <scene sceneID="GKY-3c-6am">
+            <objects>
+                <tableViewController id="4kx-74-rj0" customClass="DetailTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1ok-Vu-UiX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" id="XVY-Tp-ZLx">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XVY-Tp-ZLx" id="GGC-2i-3vR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4kx-74-rj0" id="fdB-Z0-c7G"/>
+                            <outlet property="delegate" destination="4kx-74-rj0" id="IkP-Zh-xKA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uP1-Pj-CyG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="379"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5oJ-QL-7J2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="THA-u1-yNi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Grn-W9-e9n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Utm-aa-T0R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVi-Oy-9aO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="256" y="379"/>
+        </scene>
+    </scenes>
+</document>
