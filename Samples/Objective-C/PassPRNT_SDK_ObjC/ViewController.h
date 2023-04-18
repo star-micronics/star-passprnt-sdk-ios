@@ -34,6 +34,7 @@
 
 @property (nonatomic, strong) NSArray* backArray;
 @property (nonatomic, strong) NSArray* bmArray;
+@property (nonatomic, strong) NSArray* gapArray;
 @property (nonatomic, strong) NSArray* cutArray;
 @property (nonatomic, strong) NSArray* popupArray;
 @property (nonatomic, strong) NSArray* htmlArray;
@@ -61,6 +62,7 @@
 
 @property (nonatomic, strong) NSString* selectedBack;
 @property (nonatomic, strong) NSString* selectedBm;
+@property (nonatomic, strong) NSString* selectedGap;
 @property (nonatomic, strong) NSString* selectedCut;
 @property (nonatomic, strong) NSString* selectedPopup;
 @property (nonatomic, strong) NSString* selectedHtml;

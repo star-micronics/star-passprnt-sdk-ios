@@ -1,5 +1,5 @@
 ********************************************************
-      Star PassPRNT iOS SDK Ver 2.3.0
+      Star PassPRNT iOS SDK Ver 2.4.0
          Readme_Jp.txt              スター精密（株）
 ********************************************************
 
@@ -12,6 +12,7 @@
 ==========
  1. 概要
 ==========
+
   本パッケージは、iOSのStar PassPRNT専用SDKです。
   “PassPRNT”とは、外部アプリケーション（以降、”連携アプリ”とする）と
   スターデバイス（以降、”デバイス”とする）の間に配置するアプリケーションです。
@@ -34,7 +35,8 @@
 ==========
  2. 内容
 ==========
-  PassPRNT_iOS_SDK_Ver2.3.0
+
+  PassPRNT_iOS_SDK_Ver2.4.0
   |
   | Readme_En.txt                       // リリースノート(英語)
   | Readme_Jp.txt                       // リリースノート(日本語)
@@ -54,74 +56,42 @@
 =============
  3. 適用
 =============
+
   ■ 対象OS
-   iOS 11.0 - 15.0.2
+   iOS 12.0 - 16.4.1
 
   ■ 対象ソフトウェア
-   PassPRNT Ver2.5.0
+   PassPRNT Ver 2.7.0
 
   ■ 対象プリンタモデル
-   ◇ プリンタモデル (F/W ver)
-       SM-L200     (Ver 1.1以上 - StarPRNT mode)
-       SM-S210I *1 (Ver 3.0以上 - StarPRNT mode)
-                   (Ver 2.5以上 - ESC/POS mode)
-       SM-S220I *2 (Ver 3.0以上 - StarPRNT mode)
-                   (Ver 2.1以上 - ESC/POS mode)
-       SM-S230I *2 (Ver 1.0以上 - StarPRNT mode)
-                   (Ver 1.0以上 - ESC/POS mode)
-       SM-L300     (Ver 1.0以上 - StarPRNT mode)
-       SM-T300I    (Ver 3.0以上 - StarPRNT mode)
-                   (Ver 2.5以上 - ESC/POS mode)
-       SM-T400I    (Ver 3.0以上 - StarPRNT mode)
-                   (Ver 2.5以上 - ESC/POS mode)
-       TSP650II    (Ver 2.1以上)
-       TSP700II    (Ver 5.1以上)
-       TSP800II    (Ver 2.1以上)
-       TSP100IIIBI (Ver 1.0以上)
-       TSP100IIIW  (Ver 1.4以上)
-       TSP100IIILAN(Ver 1.3以上)
-       TSP100IIIU  (Ver 1.0以上)
-       TSP100IV    (Ver 1.0以上)
-       FVP10       (Ver 1.3以上)
-       BSC10    *2 (Ver 1.0以上)
-       mPOP        (Ver 1.0.1以上)
-       mC-Print2   (Ver 1.0以上)
-       mC-Print3   (Ver 1.0以上)
-
-       *1-日本向けモデルのみ
-       *2-欧米向けモデルのみ
-
-   ◇ 対応インターフェース
-       Bluetooth: TSPシリーズ, FVP10, BSC10 (IFBD-HB03/HB04 Ver 1.0.0以上)
-                : SM-L200, SM-L300を除くポータブルプリンタ
-                : mPOP, mC-Print2, mC-Print3
-       Bluetooth Low Energy : SM-L200, SM-L300
-       Ethernet : TSPシリーズ, FVP10, BSC10 (IFBD-HE05/HE06 Ver 1.0.1以上)
-                  mC-Print2, mC-Print3
-       USB      : TSP100III, mC-Print2, mC-Print3 
+   Users Manualをご参照ください。
 
 ===========
  4. 著作権
 ===========
-  スター精密（株）Copyright 2015-2021
+
+  スター精密（株）Copyright 2015-2023
 
 ==================================
  5. Star PassPRNT iOS SDK 更新履歴
 ==================================
+
+ Ver 2.4.0
+  2023/04/10  : `gap`クエリを追加
+                `size`クエリに`1`と`2w5`を追加
+                対象OS、対象ソフトウェアを更新
+
  Ver 2.3.0
-  2021/10/29  : TSP100IVに対応
-                ブザー(BU01), メロディースピーカー(mC-Sound)のサポートを追加
+  2021/10/29  : ブザー(BU01), メロディースピーカー(mC-Sound)のサポートを追加
 
  Ver 2.2
   2020/01/23  : Webダウンロード印刷に対応 ('url'クエリ)
                 ダークモード対応
 
  Ver 2.1
-  2018/07/02  : 対応機種追加
-                ドロアー駆動時間、カット方式設定対応
+  2018/07/02  : ドロアー駆動時間、カット方式設定対応
                 不具合修正
 
  Ver 2.0
-  2017/10/31  : 対応機種/インタフェース追加
-                クエリ"bmposition"廃止
+  2017/10/31  : クエリ`bmposition`廃止
                 不具合修正

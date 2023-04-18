@@ -1,6 +1,6 @@
 ************************************************************
-      Star PassPRNT iOS SDK Ver 2.3.0
-         Readme_En.txt          Star Micronics Co., Ltd. 
+      Star PassPRNT iOS SDK Ver 2.4.0
+         Readme_En.txt          Star Micronics Co., Ltd.
 ************************************************************
 
  1. Overview
@@ -9,18 +9,18 @@
  4. Copyright
  5. Release History
 
-
 =============
  1. Overview
 =============
+
    This package contains iOS SDK for PassPRNT.
-   "PassPRNT" is an application intervening outer applications (hereinafter 
+   "PassPRNT" is an application intervening outer applications (hereinafter
    called "Coordinating App" and Star Device (hereinafter called "Device").
    This App transfers to the printer the print data converted from all Coordinating
    App information including receipt design, paper width and other related data.
    Therefore the Coordinating App needs no designing or development to establish
    communication with the printer.
-   Similarly printer status and print result are monitored as well so that 
+   Similarly printer status and print result are monitored as well so that
    Coordinating App is not required on such control.
 
    Receipt design put out of this system is supported by HTML/PDF layout, so there is
@@ -33,11 +33,11 @@
 
    Please refer to document including this package for details.
 
-
 =============
  2. Contents
 =============
-  PassPRNT_iOS_SDK_Ver2.3.0
+
+  PassPRNT_iOS_SDK_Ver2.4.0
   |
   | Readme_En.txt                       // Release Note(English)
   | Readme_Jp.txt                       // Release Note(Japanese)
@@ -54,76 +54,45 @@
         |- PassPRNT_v2.0_3inch.fmp12    // project file for sample program(3inch design)
         +- PassPRNT_v2.0_4inch.fmp12    // project file for sample program(4inch design)
 
-
 =================
  3. Scope
 =================
+
   [OS]
-    iOS 11.0 - 15.0.2
+    iOS 12.0 - 16.4.1
 
   [Software]
-    PassPRNT Ver2.5.0
+    PassPRNT Ver 2.7.0
 
   [Printer Model]
-    SM-L200     (Ver 1.1 or later - StarPRNT mode)
-    SM-S210I *1 (Ver 3.0 or later - StarPRNT mode)
-                (Ver 2.5 or later - ESC/POS mode)
-    SM-S220I *2 (Ver 3.0 or later - StarPRNT mode)
-                (Ver 2.1 or later - ESC/POS mode)
-    SM-S230I *2 (Ver 1.0 or later - StarPRNT mode)
-                (Ver 1.0 or later - ESC/POS mode)
-    SM-L300     (Ver 1.0 or later - StarPRNT mode)
-    SM-T300I    (Ver 3.0 or later - StarPRNT mode)
-                (Ver 2.5 or later - ESC/POS mode)
-    SM-T400I    (Ver 3.0 or later - StarPRNT mode)
-                (Ver 2.5 or later - ESC/POS mode)
-    TSP650II    (Ver 2.1 or later)
-    TSP700II    (Ver 5.1 or later)
-    TSP800II    (Ver 2.1 or later)
-    TSP100IIIBI (Ver 1.0 or later)
-    TSP100IIIW  (Ver 1.4 or later)
-    TSP100IIILAN(Ver 1.3 or later)
-    TSP100IIIU  (Ver 1.0 or later)
-    TSP100IV    (Ver 1.0 or later)
-    FVP10       (Ver 1.3 or later)
-    BSC10    *2 (Ver 1.0 or later)
-    mPOP        (Ver 1.0.1 or later)
-    mC-Print2   (Ver 1.0 or later)
-    mC-Print3   (Ver 1.0 or later)
-
-     *1-JP model only
-     *2-US EU model only
-
-  [Interface]
-    Bluetooth: TSP series, FVP10, BSC10 (IFBD-HB03/HB04 Ver 1.0.0 or later)
-             : Portable series except SM-L200 and SM-L300
-             : mPOP, mC-Print2, mC-Print3
-    Bluetooth Low Energy : SM-L200, SM-L300
-    Ethernet : TSP series, FVP10, BSC10 (IFBD-HE05/HE06 Ver 1.0.1 or later)
-    USB      : TSP100III, mC-Print2, mC-Print3
+    Please refer to Users Manual.
 
 ==============
  4. Copyright
 ==============
-  Copyright 2015-2021 Star Micronics Co., Ltd. All rights reserved.
+
+  Copyright 2015-2023 Star Micronics Co., Ltd. All rights reserved.
 
 ====================
  5. Release History
 ====================
+
+ Ver 2.4.0
+  2023/04/10  : Added `gap` query.
+                Added `1` and `2w5` to `size` query.
+                Updated target OS and target software.
+
  Ver 2.3.0
-  2021/10/29  : Added TSP100IV support.
-                Added Buzzer (BU01) and Melody Speaker (mC-Sound) support.
+  2021/10/29  : Added Buzzer (BU01) and Melody Speaker (mC-Sound) support.
 
  Ver 2.2
-  2020/01/23 : Added Web Download Print function ('Url' query).
-               Support Dark Mode.
+  2020/01/23  : Added Web Download Print function ('Url' query).
+                Supported Dark Mode.
 
  Ver 2.1
-  2018/07/02 : Added Printer models (mC-Print2/mC-Print3)
-               Added Drawer activation time and Paper cut function
-               Fixed issues
+  2018/07/02  : Added Drawer activation time and Paper cut function
+                Fixed issues
 
  Ver 2.0
-  2017/10/31 : Added a printer model (SM-L300) and an interface (TSP100III U)
-               Deprecated query "bmposition" feature
-               Fixed issues
+  2017/10/31  : Deprecated query "bmposition" feature
+                Fixed issues

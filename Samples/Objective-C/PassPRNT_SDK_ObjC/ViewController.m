@@ -59,6 +59,7 @@ enum {
     QUERY_soundvolume,
     QUERY_back,
     QUERY_bm,
+    QUERY_gap,
     QUERY_cut,
     QUERY_popup,
     QUERY_html,
@@ -82,12 +83,12 @@ enum {
                             @"port", @"settings", @"timeout", @"size", @"drawer", @"drawerpulse",
                             @"buzzer", @"buzzerchannel", @"buzzerrepeat", @"buzzerdrivetime", @"buzzerdelaytime",
                             @"sound", @"soundstoragearea", @"soundnumber", @"soundvolume",
-                            @"back", @"blackmark", @"cut", @"popup", @"html", @"pdf", @"url"
+                            @"back", @"blackmark", @"gap", @"cut", @"popup", @"html", @"pdf", @"url"
                             ];
     _portNameArray        = @[@"none", @"bt:", @"tcp:", @"ble:", @"usb:"];
     _portSettingsArray    = @[@"none", @"blank", @"portable", @"portable;escpos", @"escpos"];
     _timeoutArray         = @[@"none", @"10000"];
-    _sizeArray            = @[@"none", @"2", @"2w1", @"2w2", @"2w3", @"2w4", @"3", @"3w", @"3w2", @"4"];
+    _sizeArray            = @[@"none", @"1", @"2", @"2w1", @"2w2", @"2w3", @"2w4", @"2w5", @"3", @"3w", @"3w2", @"4"];
     
     _drawerArray          = @[@"none", @"off", @"ahead", @"after"];
     _drawerpulseArray     = @[@"none", @"200", @"500"];
@@ -106,6 +107,7 @@ enum {
 
     _backArray          = @[@"passprntsdk://"];
     _bmArray            = @[@"none", @"disable", @"enable", @"enableAndDetectAtPowerOn"];
+    _gapArray           = @[@"none", @"disable", @"enable", @"enableAndDetectAtPowerOn"];
     _cutArray           = @[@"none", @"partial", @"full", @"tearbar", @"nocut"];
     _popupArray         = @[@"none", @"enable", @"disable"];
     
@@ -175,6 +177,9 @@ enum {
                 break;
             case QUERY_bm:
                 _selectedBm               = (text != nil) ? text : _bmArray[0];
+                break;
+            case QUERY_gap:
+                _selectedGap              = (text != nil) ? text : _gapArray[0];
                 break;
             case QUERY_cut:
                 _selectedCut              = (text != nil) ? text : _cutArray[0];
@@ -304,6 +309,9 @@ enum {
         case QUERY_bm:
             cell.textLabel.text = _selectedBm;
             break;
+        case QUERY_gap:
+            cell.textLabel.text = _selectedGap;
+            break;
         case QUERY_cut:
             cell.textLabel.text = _selectedCut;
             break;
@@ -318,8 +326,7 @@ enum {
             break;
         case QUERY_url:
             cell.textLabel.text = _selectedUrl;
-        break;
-
+            break;
         default:
             cell.textLabel.text = @"unknown";
             break;
@@ -394,6 +401,9 @@ enum {
                 break;
             case QUERY_bm:
                 detailTableViewController.detailArray  = _bmArray;
+                break;
+            case QUERY_gap:
+                detailTableViewController.detailArray  = _gapArray;
                 break;
             case QUERY_cut:
                 detailTableViewController.detailArray  = _cutArray;
@@ -485,13 +495,16 @@ enum {
                 text = [self encodeHtmlDataWith:_selectedBack];
                 break;
             case QUERY_bm:
-                text = [self encodeHtmlDataWith:_selectedBm];
+                text = _selectedBm;
+                break;
+            case QUERY_gap:
+                text = _selectedGap;
                 break;
             case QUERY_cut:
                 text = _selectedCut;
                 break;
             case QUERY_popup:
-                text = [self encodeHtmlDataWith:_selectedPopup];
+                text = _selectedPopup;
                 break;
             case QUERY_html:
             {
@@ -632,6 +645,7 @@ enum {
     
     [AppDelegate setSelectedItem:_backArray[0]            AsKey:[NSString stringWithFormat:@"%d", QUERY_back]];
     [AppDelegate setSelectedItem:_bmArray[0]              AsKey:[NSString stringWithFormat:@"%d", QUERY_bm]];
+    [AppDelegate setSelectedItem:_gapArray[0]             AsKey:[NSString stringWithFormat:@"%d", QUERY_gap]];
     [AppDelegate setSelectedItem:_cutArray[0]             AsKey:[NSString stringWithFormat:@"%d", QUERY_cut]];
     [AppDelegate setSelectedItem:_popupArray[0]           AsKey:[NSString stringWithFormat:@"%d", QUERY_popup]];
     [AppDelegate setSelectedItem:_htmlArray[0]            AsKey:[NSString stringWithFormat:@"%d", QUERY_html]];
