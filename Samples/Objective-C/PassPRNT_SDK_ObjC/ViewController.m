@@ -88,7 +88,7 @@ enum {
     _portNameArray        = @[@"none", @"bt:", @"tcp:", @"ble:", @"usb:"];
     _portSettingsArray    = @[@"none", @"blank", @"portable", @"portable;escpos", @"escpos"];
     _timeoutArray         = @[@"none", @"10000"];
-    _sizeArray            = @[@"none", @"1", @"2", @"2w1", @"2w2", @"2w3", @"2w4", @"2w5", @"3", @"3w", @"3w2", @"4"];
+    _sizeArray            = @[@"none", @"1", @"2", @"2w1", @"2w2", @"2w3", @"2w4", @"2w5", @"2w6", @"2w7", @"3", @"3w", @"3w2", @"4"];
     
     _drawerArray          = @[@"none", @"off", @"ahead", @"after"];
     _drawerpulseArray     = @[@"none", @"200", @"500"];

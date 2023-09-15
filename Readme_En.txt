@@ -1,5 +1,5 @@
 ************************************************************
-      Star PassPRNT iOS SDK Ver 2.4.0
+      Star PassPRNT iOS SDK Ver 2.5.0
          Readme_En.txt          Star Micronics Co., Ltd.
 ************************************************************
 
@@ -37,7 +37,7 @@
  2. Contents
 =============
 
-  PassPRNT_iOS_SDK_Ver2.4.0
+  PassPRNT_iOS_SDK_Ver2.5.0
   |
   | Readme_En.txt                       // Release Note(English)
   | Readme_Jp.txt                       // Release Note(Japanese)
@@ -59,10 +59,10 @@
 =================
 
   [OS]
-    iOS 12.0 - 16.4.1
+    iOS 13.0 - 16.6
 
   [Software]
-    PassPRNT Ver 2.7.0
+    PassPRNT Ver 2.8.0
 
   [Printer Model]
     Please refer to Users Manual.
@@ -76,6 +76,10 @@
 ====================
  5. Release History
 ====================
+
+ Ver 2.5.0
+  2023/09/07  : Added `2w6` and `2w7` to `size` query.
+                Updated target OS and target software.
 
  Ver 2.4.0
   2023/04/10  : Added `gap` query.
