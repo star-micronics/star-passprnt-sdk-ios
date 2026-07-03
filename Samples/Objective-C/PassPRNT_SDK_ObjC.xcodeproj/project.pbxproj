@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		206EB1671F6234090016B0BA /* receiptPDF.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 206EB1661F6234090016B0BA /* receiptPDF.pdf */; };
+		AA7EEE4D2FEB676F0082FA78 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7EEE4C2FEB676F0082FA78 /* SceneDelegate.m */; };
 		EB03CDE41D1BA2ED006F7AB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB03CDE31D1BA2ED006F7AB0 /* main.m */; };
 		EB03CDE71D1BA2ED006F7AB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB03CDE61D1BA2ED006F7AB0 /* AppDelegate.m */; };
 		EB03CDEA1D1BA2ED006F7AB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB03CDE91D1BA2ED006F7AB0 /* ViewController.m */; };
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		206EB1661F6234090016B0BA /* receiptPDF.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = receiptPDF.pdf; sourceTree = "<group>"; };
+		AA7EEE4B2FEB676F0082FA78 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		AA7EEE4C2FEB676F0082FA78 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		EB03CDDF1D1BA2ED006F7AB0 /* PassPRNT_SDK_ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassPRNT_SDK_ObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB03CDE31D1BA2ED006F7AB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EB03CDE51D1BA2ED006F7AB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +114,8 @@
 		EB03CDE11D1BA2ED006F7AB0 /* PassPRNT_SDK_ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				AA7EEE4B2FEB676F0082FA78 /* SceneDelegate.h */,
+				AA7EEE4C2FEB676F0082FA78 /* SceneDelegate.m */,
 				EB03CDE51D1BA2ED006F7AB0 /* AppDelegate.h */,
 				EB03CDE61D1BA2ED006F7AB0 /* AppDelegate.m */,
 				EB03CDE81D1BA2ED006F7AB0 /* ViewController.h */,
@@ -301,6 +306,7 @@
 			files = (
 				EB03CE181D1BBFF3006F7AB0 /* DetailTableViewController.m in Sources */,
 				EB03CDEA1D1BA2ED006F7AB0 /* ViewController.m in Sources */,
+				AA7EEE4D2FEB676F0082FA78 /* SceneDelegate.m in Sources */,
 				EB03CDE71D1BA2ED006F7AB0 /* AppDelegate.m in Sources */,
 				EB03CDE41D1BA2ED006F7AB0 /* main.m in Sources */,
 			);
@@ -479,7 +485,7 @@
 				INFOPLIST_FILE = PassPRNT_SDK_ObjC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 2.6.0;
+				MARKETING_VERSION = 2.6.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.star-m.PassPRNT-SDK-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -495,7 +501,7 @@
 				INFOPLIST_FILE = PassPRNT_SDK_ObjC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 2.6.0;
+				MARKETING_VERSION = 2.6.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.star-m.PassPRNT-SDK-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
